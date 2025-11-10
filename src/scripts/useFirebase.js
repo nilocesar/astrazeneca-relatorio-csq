@@ -22,11 +22,14 @@ async function getDocumentsOrderedByField(collectionDB) {
 
     let results = [];
     querySnapshot.forEach((doc) => {
+
       results.push({
         id: doc.id,
         data: doc.data(),
       });
     });
+
+    console.log("results", results);
 
     return results;
   } catch (error) {
