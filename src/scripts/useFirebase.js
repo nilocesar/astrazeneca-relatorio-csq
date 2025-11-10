@@ -12,6 +12,7 @@ async function getDocumentsOrderedByField(collectionDB) {
   try {
     const querySnapshot = await collectionDB
       .orderBy("point", "desc")
+      .orderBy("time", "asc")
       .get();
 
     if (querySnapshot.empty) {

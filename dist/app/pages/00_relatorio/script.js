@@ -3,6 +3,7 @@ $(document).ready(function(){intRelatorio(),$("#dwnldBtn").on("click",async()=>{
 								<td>${t.data.nome||t.data.name}</td>
 								<td>${t.data.email}</td>
 								<td>${Number(t.data.point)}</td>
+                <td>${Number(t.data.time||0)}s</td>
                 <td class="deletarBtn" indice=${e} name=${t.data.name} email=${t.data.email}><span>Deletar</span></td>
 							</tr>`),t));var a=null;$(".deletarBtn").on("click",function(){a=$(this),$("#pop1").css("display","flex"),$("#pop1").find("span").html(a.attr("name"))}),$("#cancel").on("click",function(){$("#pop1").css("display","none")}),$("#confirmClearBd").on("click",function(){$("#pop1").css("display","none");var t={...e[a.attr("indice")].data};$(".preloader").removeClass("hide"),bridge.handlerControlStatusUser(t,()=>{intRelatorio()})})};
 //# sourceMappingURL=script.js.map

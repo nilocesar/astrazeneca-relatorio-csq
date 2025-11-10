@@ -159,6 +159,7 @@ const controlRanking = (results) => {
 								<td>${item.data.nome || item.data.name}</td>
 								<td>${item.data.email}</td>
 								<td>${Number(item.data.point)}</td>
+                <td>${Number(item.data.time || 0)}s</td>
                 <td class="deletarBtn" indice=${indice} name=${
       item.data.name
     } email=${item.data.email}><span>${"Deletar"}</span></td>
