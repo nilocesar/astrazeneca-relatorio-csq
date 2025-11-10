@@ -1,0 +1,56 @@
+extends template.page-base.pug
+mixin botaoOk(expressao)
+    button.btn.btn-default(onclick=expressao) Ok
+mixin imgmap-alt(texto, mapa, classe)
+     .alternativa(class=classe data-imgmap=mapa)
+        .seletor
+        .text!=texto
+block styles
+    link(rel="stylesheet", href="style.css")
+
+block body
+    block variables
+    .cover
+    .principal.full-iframe(id=id)
+        .center-flex
+            .box
+                .header
+                    .label 
+                        h3 
+                            block pergunta
+                .body 
+                    .imagem
+                        img(src=imgpath)
+                    .alternativas
+                        block alternativas
+                .footer
+                    button.btn.btn-ok.btn-default.confirmar Confirmar
+
+        .center-flex.feedback.feedback-positivo
+            .box
+                .header 
+                    .label 
+                        h1
+                            block title-positivo  
+                .body
+                    .texto
+                        block feedback-positivo 
+                .footer
+                    +botaoOk(closeFeedbackClickExpression)
+
+        .center-flex.feedback.feedback-negativo
+            .box
+                .header 
+                    .label 
+                        h1
+                            block title-negativo  
+                .body
+                    .texto
+                        block feedback-negativo
+                .footer
+                    +botaoOk(closeFeedbackClickExpression)                    
+block scripts
+    script(src="../../modules/component.pick-one-imgmap.js")
+    script(src="script.js")                
+
+

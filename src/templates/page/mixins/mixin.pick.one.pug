@@ -1,0 +1,6 @@
+mixin pick-one-alternativa(ehRespostaCorreta, seletor , libras)
+    button.alternativa(class = ehRespostaCorreta ? "resposta-correta" : "resposta-errada" , tabindex=acessib_count++ , data-libras=libras)
+        .seletor
+            p!=seletor
+        .texto
+            block

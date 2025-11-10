@@ -1,0 +1,68 @@
+[
+    {
+        "es": {
+            "initial-00-img-02": {
+                "src": "../../assets/img/capa/logo.svg",
+                "class": "",
+                "alt": ""
+            },
+            "35_tela-img-01": {
+                "src": "../../assets/img/page35_img1_es.png",
+                "class": "",
+                "alt": ""
+            },
+            "35_tela-img-02": {
+                "src": "../../assets/img/page35_img2_es.png",
+                "class": "",
+                "alt": ""
+            },
+            "35_tela-img-03": {
+                "src": "../../assets/img/page35_img3_es.png",
+                "class": "",
+                "alt": ""
+            },
+            "57_tela-img-01": {
+                "src": "../../assets/img/telafinal/bg01_es.png",
+                "class": "",
+                "alt": ""
+            },
+            "57_tela-img-02": {
+                "src": "../../assets/img/telafinal/bg02_es.png",
+                "class": "",
+                "alt": ""
+            }
+        },
+        "en": {
+            "initial-00-img-02": {
+                "src": "../../assets/img/logo_en.png",
+                "class": "",
+                "alt": ""
+            },
+            "35_tela-img-01": {
+                "src": "../../assets/img/page35_img1_en.png",
+                "class": "",
+                "alt": ""
+            },
+            "35_tela-img-02": {
+                "src": "../../assets/img/page35_img2_en.png",
+                "class": "",
+                "alt": ""
+            },
+            "35_tela-img-03": {
+                "src": "../../assets/img/page35_img3_en.png",
+                "class": "",
+                "alt": ""
+            },
+            "57_tela-img-01": {
+                "src": "../../assets/img/telafinal/bg01_en.png",
+                "class": "",
+                "alt": ""
+            },
+            "57_tela-img-02": {
+                "src": "../../assets/img/telafinal/bg02_en.png",
+                "class": "",
+                "alt": ""
+            }
+        }
+    }
+]

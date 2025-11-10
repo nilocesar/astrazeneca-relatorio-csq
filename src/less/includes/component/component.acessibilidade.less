@@ -1,0 +1,143 @@
+//Acessibilidade lib
+
+._access-menu{
+  &::before{
+    position: relative;
+    width: 100%;
+    content: "Acessibilidade";
+    text-align: center;
+    font-size: 1em;
+    color: #FBF5DA;
+    top: 1em;
+    left: 4.6em;
+  }
+}
+
+.es{
+	._access-menu{
+		&::before{
+			position: relative;
+			content: "Accesibilidad" !important;
+		}
+	}
+}
+
+.en{
+	._access-menu{
+		&::before{
+			position: relative;
+			content: "Accessibility" !important;
+		}
+	}
+}
+
+
+._access-menu ul {
+  margin-top: 2em;
+}
+
+._access-icon {
+  &.material-icons {
+      &._access {
+          &.circular {
+              border-radius: 0;
+              box-shadow: none;
+          }
+      }
+  }
+}
+
+.st0 {
+  fill: @color-purple !important;
+}
+
+._access-icon.circular {
+  left: 1rem !important;
+  right: auto !important;
+  top: 1rem !important;
+  bottom: auto !important;
+}
+
+._access-menu {
+  z-index: 999999 !important;
+}
+
+._access-icon {
+  width: 4rem !important;
+  height: 4rem !important;
+  font-size: 1.4em !important;
+  line-height: 0 !important;
+  text-indent: 0 !important;
+  background-color: @color-purple !important;
+  color: white !important;
+  top: -91% !important;
+  right: -94% !important;
+  z-index: 999999 !important;
+  opacity: 1;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  border: none !important;
+  &::before{
+      position: relative;
+      content: '';
+      width: 80%;
+      height: 80%;
+      // background:url('../../assets/img/acessibility.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+  }
+}
+
+._access-menu {
+  -moz-user-select: none !important;
+  -webkit-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+  position: fixed !important;
+  width: 25vw !important;
+  height: 100vh !important;
+  transition-duration: .5s;
+  z-index: 99991;
+  opacity: 1;
+  background-color: #00a88e !important;
+  color: black;
+  border-radius: 0 !important;
+  border: none;
+  font-family: "Arial" !important;
+  min-width: 300px;
+  box-shadow: 0px 0px 13px black;
+  max-height: 100vh;
+}
+
+._access-menu ul li {
+  font-size: 28px !important;
+  margin-top: 20px!important;
+  padding: 10px !important;
+
+  &::before{
+    display: none !important;
+  }
+  svg{
+    display: none !important;
+  }
+}
+._menu-btn {
+  color: #FFF !important;
+}
+
+// .btnLibras {
+//   border: none;
+//   width: 4em;
+//   height: 4em;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   cursor: pointer;
+// }
+
+@media screen and (max-width: 900) {
+  ._access-icon, ._access-menu, .acessibility_controll img {
+      display: none !important;
+  }
+}

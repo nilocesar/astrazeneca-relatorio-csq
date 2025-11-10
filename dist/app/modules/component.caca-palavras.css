@@ -1,0 +1,74 @@
+.caca-palavras .caca-palavras-linha {
+  display: flex;
+}
+.caca-palavras .caca-palavras-letra {
+  position: relative;
+  overflow: hidden;
+  width: 2em;
+  height: 2em;
+  border: solid 1px black;
+  cursor: pointer;
+  font-size: 1.4em;
+  text-align: center;
+  line-height: 2em;
+}
+.caca-palavras .caca-palavras-letra.lock {
+  pointer-events: none;
+}
+.caca-palavras .caca-palavras-letra.caca-palavras-selected {
+  background-color: blue;
+  color: #fff;
+  border-color: blue;
+}
+.caca-palavras .caca-palavras-letra .red-cross {
+  content: '';
+  position: absolute;
+  width: 2.82842712em;
+  height: 2px;
+  background-color: red;
+  top: calc(50% - 1px);
+  left: -0.5em;
+}
+.caca-palavras .caca-palavras-letra.wrong-letter::after {
+  content: '';
+  position: absolute;
+  width: 2.82842712em;
+  height: 2px;
+  background-color: red;
+  top: calc(50% - 1px);
+  left: -0.5em;
+  transform: rotate(45deg);
+}
+.caca-palavras .caca-palavras-letra.wrong-letter::before {
+  content: '';
+  position: absolute;
+  width: 2.82842712em;
+  height: 2px;
+  background-color: red;
+  top: calc(50% - 1px);
+  left: -0.5em;
+  transform: rotate(-45deg);
+}
+.caca-palavras .caca-palavras-letra.correct {
+  background-color: green;
+  color: #fff;
+}
+.caca-palavras .caca-palavras-letra.incorrect {
+  background-color: red;
+  color: #fff;
+}
+.caca-palavras-database .caca-palavras-word {
+  border-bottom: solid 1px #000000;
+}
+.caca-palavras-database .caca-palavras-word.correct {
+  color: green;
+}
+.caca-palavras-database .caca-palavras-word.incorrect {
+  color: red;
+}
+.caca-palavras-database .caca-palavras-word.hide-word {
+  pointer-events: none;
+  user-select: none;
+  color: transparent !important;
+}
+

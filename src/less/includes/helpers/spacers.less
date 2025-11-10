@@ -1,0 +1,134 @@
+@base: 1rem;
+@proportions: 0, 0.25, 0.5, 1, 1.5, 3, 4, 5, 6, 8, 10;
+
+.proper(@property, @value) {
+	@{property}: @value;
+}
+
+.makeOne(@name, @property, @value) {
+	.@{name}-@{value} {
+		.proper(@property, @value);
+	}
+}
+
+.makeMany(@name, @property, @values, @counter) when (@counter > 0) {
+	.makeMany(@name, @property, @values, @counter - 1);
+	.makeOne(@name, @property, extract(@values, @counter));
+}
+
+.propsMake(@props, @value, @i) when (@i > 0) {
+	.propsMake(@props, @value, @i - 1);
+	.proper(extract(@props, @i), @value);
+}
+
+.makespacer(@name, @property, @values, @counter) when (@counter > 0) {
+	@number: @counter - 1;
+	.makespacer(@name, @property, @values, @number);
+
+	.@{name}-@{number} {
+		.propsMake(@property,
+		@base * extract(@values, @counter),
+		length(@property));
+	}
+}
+
+.makespacer(m, margin, @proportions, length(@proportions));
+.makespacer(mt, margin-top, @proportions, length(@proportions));
+.makespacer(mb, margin-bottom, @proportions, length(@proportions));
+.makespacer(mr, margin-right, @proportions, length(@proportions));
+.makespacer(ml, margin-left, @proportions, length(@proportions));
+.makespacer(mv, margin-top margin-bottom, @proportions, length(@proportions));
+.makespacer(mh, margin-left margin-right, @proportions, length(@proportions));
+
+.makespacer(p, padding, @proportions, length(@proportions));
+.makespacer(pt, padding-top, @proportions, length(@proportions));
+.makespacer(pb, padding-bottom, @proportions, length(@proportions));
+.makespacer(pr, padding-right, @proportions, length(@proportions));
+.makespacer(pl, padding-left, @proportions, length(@proportions));
+.makespacer(pv, padding-top padding-bottom, @proportions, length(@proportions));
+.makespacer(ph, padding-left padding-right, @proportions, length(@proportions));
+
+.makespacer(b-r, border-radius, @proportions, length(@proportions));
+.makespacer(b, border-width, @proportions, length(@proportions));
+.makespacer(bt, border-top-width, @proportions, length(@proportions));
+.makespacer(bb, border-bottom-width, @proportions, length(@proportions));
+.makespacer(br, border-right-width, @proportions, length(@proportions));
+.makespacer(bl, border-left-width, @proportions, length(@proportions));
+.makespacer(bv,
+border-top border-bottom-width,
+@proportions,
+length(@proportions));
+.makespacer(bh,
+border-left border-right-width,
+@proportions,
+length(@proportions));
+
+.makespacer(h, height, @proportions, length(@proportions));
+.makespacer(w, width, @proportions, length(@proportions));
+.makespacer(wh, width height, @proportions, length(@proportions));
+.makeMany(text-align, text-align, center left right, 3);
+
+.full {
+	width: 100%;
+	height: 100%;
+}
+
+.w-full {
+	width: 100%;
+}
+
+.h-full {
+	height: 100%;
+}
+
+.relative {
+	position: relative;
+}
+
+.absolute {
+	position: absolute;
+}
+
+.text-align-center {
+	text-align: center;
+}
+
+.text-align-left {
+	text-align: left;
+}
+
+.text-align-right {
+	text-align: right;
+}
+
+.text-align-justify {
+	text-align: justify;
+}
+
+
+.fx {
+	display: flex;
+}
+
+.fx-jcc {
+	.fx;
+	justify-content: center;
+}
+
+.grow-w {
+	width: 100%;
+}
+
+.grow-h {
+	height: 100%;
+}
+
+.grow {
+	width: 100%;
+	height: 100%;
+}
+
+.fx-aic {
+	.fx;
+	align-items: center;
+}

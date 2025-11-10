@@ -1,0 +1,36 @@
+mixin basic-meta-tags
+	meta(charset="utf-8")
+	meta(http-equiv="X-UA-Compatible" content="IE=edge")
+	meta(name="viewport" content="width=device-width, initial-scale=1")
+
+mixin scriptTemplate(name)
+	script(src="app/template/"+name)
+
+mixin scriptVendor(name)
+	script(src="app/vendor/"+name)
+
+mixin scriptModule(name)
+	script(src="app/modules/"+name)
+
+mixin scriptScripts(name)
+	script(src="app/scripts/"+name)
+
+mixin linkVendor(name)
+	link(rel="stylesheet" href="app/vendor/"+name)
+
+mixin linkModule(name)
+	link(rel="stylesheet" href="app/modules/"+name)
+
+mixin linkTemplate(name)
+	link(rel="stylesheet" href="app/template/"+name)
+
+mixin image(filename, classes, alt)
+	img(src="app/assets/img/"+filename, class=classes, alt=alt)
+
+mixin addStyle
+	link(rel="stylesheet", href="style.css")
+
+mixin addScript
+	script(src="script.js")
+mixin addConfig
+	script(src='app/config.js')

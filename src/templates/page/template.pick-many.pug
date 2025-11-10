@@ -1,0 +1,69 @@
+extends template.page-base-adaptativo.pug
+
+mixin botaoOk(expressao)
+	button.btn.btn-default(onclick=expressao) Ok
+	
+mixin alternativa(resposta, indicadores)
+	.alternativa(class="resposta-"+resposta, data-indicadores=JSON.stringify(indicadores))
+		.text 
+			block
+
+mixin alternativaCorreta(indicadores)
+	+alternativa('correta', indicadores)
+		block
+
+mixin alternativaErrada(indicadores)
+	+alternativa('errada', indicadores)
+		block
+block styles
+	link(rel="stylesheet", href="style.css")
+
+block body
+	block variables
+	.cover
+	.exercise.quiz.pick-many.principal.full-iframe(id=id)
+		.center-flex
+			.box
+				.header
+					.label 
+						h1.color-grey.text-align-center Agora Responda!
+				.body 
+					p.pergunta 
+						block pergunta
+					.alternativas
+						block alternativas
+				.footer.flex-center.mt-4
+					button.btn.btn-ok.btn-yellow.confirmar Confirmar
+
+		.center-flex.feedback.feedback-positivo
+			.box
+				.header 
+					.label 
+						h1
+							block title-positivo  
+				.body
+					.texto
+						block feedback-positivo 
+				.footer
+					button.btn.btn-red(onclick=closeFeedbackClickExpression) Avancar
+			.btn.btn-purple.btn-pos-prev(onclick="navigate.prev()") Voltar
+		.center-flex.feedback.feedback-negativo
+			.box
+				.header 
+					.label 
+						h1
+							block title-negativo  
+				.body
+					.texto
+						block feedback-negativo
+				.footer
+					button.btn.btn-green(onclick=closeFeedbackClickExpression) Avancar
+			.btn.btn-purple.btn-pos-prev(onclick="navigate.prev()") Voltar
+block scripts
+	script(src="../../modules/exercise.pick-many.js")
+	script.
+		events.on('ready', function () {
+			$('.quiz').first().PickManyFlamboyant();
+		}); 
+
+

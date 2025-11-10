@@ -1,0 +1,68 @@
+[
+    {
+        "es": {
+            "equipamento-video-01": {
+                "src": "../../assets/videos/01_nosso_proposito_es.mp4",
+                "class": "",
+                "alt": ""
+            },
+            "equipamento-video-02": {
+                "src": "../../assets/videos/02_execucao_es.mp4",
+                "class": "",
+                "alt": ""
+            },
+            "equipamento-video-03": {
+                "src": "../../assets/videos/03_zero_fatalidade_es.mp4",
+                "class": "",
+                "alt": ""
+            },
+            "equipamento-video-04": {
+                "src": "../../assets/videos/04_lideranca_desenvolvedora_es.mp4",
+                "class": "",
+                "alt": ""
+            },
+            "equipamento-video-05": {
+                "src": "../../assets/videos/05_biocoque_es.mp4",
+                "class": "",
+                "alt": ""
+            },
+            "equipamento-video-06": {
+                "src": "../../assets/videos/06_som_novo_es.mp4",
+                "class": "",
+                "alt": ""
+            }
+        },
+        "en": {
+            "equipamento-video-01": {
+                "src": "../../assets/videos/01_nosso_proposito_en.mp4",
+                "class": "",
+                "alt": ""
+            },
+            "equipamento-video-02": {
+                "src": "../../assets/videos/02_execucao_en.mp4",
+                "class": "",
+                "alt": ""
+            },
+            "equipamento-video-03": {
+                "src": "../../assets/videos/03_zero_fatalidade_en.mp4",
+                "class": "",
+                "alt": ""
+            },
+            "equipamento-video-04": {
+                "src": "../../assets/videos/04_lideranca_desenvolvedora_en.mp4",
+                "class": "",
+                "alt": ""
+            },
+            "equipamento-video-05": {
+                "src": "../../assets/videos/05_biocoque_en.mp4",
+                "class": "",
+                "alt": ""
+            },
+            "equipamento-video-06": {
+                "src": "../../assets/videos/06_som_novo_en.mp4",
+                "class": "",
+                "alt": ""
+            }
+        }
+    }
+]

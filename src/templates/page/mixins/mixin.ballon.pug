@@ -1,0 +1,28 @@
+- const tabs = [];
+
+mixin ballon(template)
+	.container-ballon(class!=template.class)
+		+image('avatar/peixe5.svg', 'ico-ballon')
+		.nav-ballon(indice=0)
+			button.btn-ballon.btn-ballon-prev(tabindex=-1)
+				+image('btnAvancar.svg', '')
+			button.btn-ballon.btn-ballon-next.pulse(tabindex=-1)
+				+image('btnAvancar.svg', '')
+			button.btn-ballon.btn-ballon-closed.pulse(tabindex=99)
+				+image('button-close.svg', '')
+		.fundo-ballon
+			block
+			each tab in tabs
+				.slide-ballon( libras = tab.libra )
+					.slide-base.up!=tab.block
+
+mixin ballon-item( data_libra = "" )
+	- var data = {};
+	- const oldBuf = pug_html;
+	- pug_html = '';
+	block
+	-
+		data.block = pug_html;
+		data.libra = data_libra;
+		tabs.push(data);
+		pug_html = oldBuf;

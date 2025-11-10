@@ -1,0 +1,31 @@
+include mixins/index.pug
+
+doctype html
+html.full-iframe.mr-fontsize
+	head
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		link(rel="stylesheet" type="text/css" href="../../template/page.css")
+		+linkModule('component.slider.css')
+
+		block styles
+	body
+		.mr-full
+			block body
+
+	+scriptVendor('eventEmitter.js')
+	+scriptVendor('jquery.min.js')
+	+scriptModule('hammer.min.js')
+	+scriptModule('component.base-page.js')
+	+scriptModule('behavior.adaptative.js')
+	+scriptModule('component.modal.js')
+	+scriptModule('component.slider.js')
+	+scriptModule('hammer.min.js')
+	+scriptScripts('resize.js')
+	+scriptScripts('animated.js')
+	+scriptScripts('gamecontrol.js')
+	+scriptScripts('jQuery.ellipsis.js')
+
+	
+	block scripts

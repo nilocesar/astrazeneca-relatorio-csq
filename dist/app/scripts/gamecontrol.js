@@ -1,0 +1,2 @@
+function getObjectFromLocalStorage(e){e=localStorage.getItem(e);return e?JSON.parse(e):null}function checkAndSaveOrUpdateObject(e,t){var n=getObjectFromLocalStorage(e),t=n?{...n,...t}:t,n=(console.log(`${n?"Updating":"Creating"} stored`,t),JSON.stringify(t));localStorage.setItem(e,n)}function fullscreen(){$(".fullscreen").on("click",function(){bridge.fullScreen()})}$(document).ready(function(){fullscreen()});
+//# sourceMappingURL=gamecontrol.js.map

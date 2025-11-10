@@ -1,0 +1,69 @@
+#medal {
+	backdrop-filter: grayscale(1);
+
+	.cardInativo{
+		filter: grayscale(100%);
+	}
+
+	.whapper {
+		width: 54em;
+    	height: 19rem;
+		position: relative;
+
+		.medal {
+			position: absolute;
+			top: 3.6em;
+			left: 0;
+			width: 11.9em;
+			z-index: 1;
+			box-shadow: 0em 0em 0.5em #7CCCBF;
+			border-radius: 100%;
+		}
+
+		.box {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 45em;
+			height: 19em;
+			border-radius: 1.8em;
+			background-color: #00A88E;
+			border: #7CCCBF 0.25em solid;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			padding: 2em 3.5em 1em 5em;
+			box-shadow: 0em 0em 0.5em #808181;
+
+			.lineBox {
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+				.card {
+					width: 8em;
+					.ico {
+						width: 100%;
+					}
+					h2 {
+						margin: 0;
+						font-size: 1em;
+						color: #FFD998;
+						text-align: center;
+					}
+				}
+				.line {
+					width: 1px;
+					height: 6em;
+					margin: 1.5em 0 0;
+					background-color: #fff;
+				}
+			}
+
+			h2 {
+				color: #2E3192;
+				font-weight: bold;
+				margin: 1em 0 0;
+			}
+		}
+	}
+}

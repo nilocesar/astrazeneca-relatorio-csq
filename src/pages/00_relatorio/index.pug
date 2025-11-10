@@ -1,0 +1,53 @@
+extends ../../templates/page/template.page-base-adaptativo.pug
+
+block styles
+	link(rel="stylesheet", href="style.css")
+
+block body
+	.body
+	    
+		.preloader 
+			.lds-eclipse
+				.spinner
+				.spinner.reverse
+
+		+header
+		h2.titleRanking Relatório
+
+		section.sec1
+			.ranking
+				<table id="dataTable" class="customTable">
+					<thead>
+						<tr>
+							<th>Posição</th>
+							<th>Nome</th>
+							<th>Email</th>
+							<th>Ponto(s)</th>
+							<th class="no-export">Deletar</th>
+						</tr>
+					</thead>
+					<tbody></tbody>
+				</table>
+			
+			.containerBtns 
+				//- button#clearBtn.danger  Limpar Banco de Dados
+				button#dwnldBtn.confirm Download da planilha
+					
+								
+		
+		.modal#pop1
+			.box
+				
+				.topo
+					h2 Atenção!
+				.containerBox
+					h3 
+						| Você confirma que deseja deletar o seguinte usuário: <span></span>
+					 
+					.containerBtns 
+						button#cancel.danger Cancelar
+						button#confirmClearBd.confirm Confirmar
+		
+block scripts
+	+scriptScripts('exceljs.min.js')
+	script(src="script.js")

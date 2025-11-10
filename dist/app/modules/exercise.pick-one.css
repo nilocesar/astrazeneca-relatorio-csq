@@ -1,0 +1,38 @@
+.pick-one {
+  user-select: none;
+}
+.pick-one.respondido .alternativa,
+.pick-one.respondido .confirmar {
+  pointer-events: none;
+}
+.pick-one.respondido .confirmar {
+  display: none;
+}
+.pick-one.respondido .resposta-correta {
+  background-color: green;
+  color: white;
+}
+.pick-one.respondido .resposta-errada {
+  background-color: red;
+  color: white;
+}
+.pick-one .alternativa {
+  border: solid 2px black;
+  padding: 0.5em 1em;
+  display: inline-block;
+  cursor: pointer;
+}
+.pick-one .alternativa * {
+  pointer-events: none;
+}
+.pick-one .alternativa:hover {
+  border-color: blue;
+}
+.pick-one .alternativa.selecionado {
+  border-color: cyan;
+}
+.pick-one .hide {
+  opacity: 0;
+  pointer-events: none;
+}
+

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html class="full-iframe mr-fontsize">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../../template/page.css">
+    <link rel="stylesheet" href="../../modules/component.slider.css"/>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="mr-full">
+      <div class="body">
+        <div class="preloader"> 
+          <div class="lds-eclipse">
+            <div class="spinner"></div>
+            <div class="spinner reverse"></div>
+          </div>
+        </div>
+        <header><img class="logo" src="../../assets/img/logo.svg" tabindex="-1" alt="" aria-label="" image-translate=""/>
+          <button class="fullscreen"><img class="img" src="../../assets/img/fullscreen.png" tabindex="-1" alt="" aria-label="" image-translate=""/>
+          </button>
+        </header>
+        <h2 class="titleRanking">Relatório</h2>
+        <section class="sec1">
+          <div class="ranking"><table id="dataTable" class="customTable">
+<thead>
+<tr>
+<th>Posição</th>
+<th>Nome</th>
+<th>Email</th>
+<th>Ponto(s)</th>
+<th class="no-export">Deletar</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+          </div>
+          <div class="containerBtns"> 
+            <button class="confirm" id="dwnldBtn">Download da planilha</button>
+          </div>
+        </section>
+        <div class="modal" id="pop1">
+          <div class="box">
+            <div class="topo">
+              <h2>Atenção!</h2>
+            </div>
+            <div class="containerBox">
+              <h3>
+                 Você confirma que deseja deletar o seguinte usuário: <span></span></h3>
+              <div class="containerBtns"> 
+                <button class="danger" id="cancel">Cancelar</button>
+                <button class="confirm" id="confirmClearBd">Confirmar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="../../vendor/eventEmitter.js"></script>
+  <script src="../../vendor/jquery.min.js"></script>
+  <script src="../../modules/hammer.min.js"></script>
+  <script src="../../modules/component.base-page.js"></script>
+  <script src="../../modules/behavior.adaptative.js"></script>
+  <script src="../../modules/component.modal.js"></script>
+  <script src="../../modules/component.slider.js"></script>
+  <script src="../../modules/hammer.min.js"></script>
+  <script src="../../scripts/resize.js"></script>
+  <script src="../../scripts/animated.js"></script>
+  <script src="../../scripts/gamecontrol.js"></script>
+  <script src="../../scripts/jQuery.ellipsis.js"></script>
+  <script src="../../scripts/exceljs.min.js"></script>
+  <script src="script.js"></script>
+</html>

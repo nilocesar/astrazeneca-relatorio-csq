@@ -1,0 +1,19 @@
+include ./mixins/mixin.page.imports.pug
+
+doctype html
+html.mr-fontsize(lang='pt')
+	head
+		+basic-meta-tags
+		block meta
+		+linkVendor('flexboxgrid.min.css')
+		+linkTemplate('page.css')
+		block styles
+	body
+		block body
+
+	+scriptVendor('eventEmitter.js')
+	+scriptVendor('jquery.min.js')
+	+scriptModule('component.base-page.js')
+	+scriptModule('behavior.adaptative.js')
+	+scriptScripts('resize.js')
+	block scripts

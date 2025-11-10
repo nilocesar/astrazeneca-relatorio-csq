@@ -1,0 +1,323 @@
+.exercise {
+	position: relative;
+
+	.hide {
+		opacity: 0;
+		pointer-events: none;
+
+		* {
+			opacity: 0;
+			pointer-events: none;
+		}
+	}
+
+	&.quiz {
+		user-select: none;
+
+		* {
+			user-select: none;
+		}
+
+		.feedback {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			padding: 2em;
+			background-color: fadeout(@color-white, 10%);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			z-index: 12;
+
+			.box {
+				.label {
+					justify-content: center;
+				}
+
+				min-width: 25em;
+				max-width: 35em;
+
+				.body {
+					padding: 1em;
+				}
+			}
+
+			&.feedback-positivo {
+				.box {
+					background-color: @color-green;
+
+					.label {
+						text-align: center;
+						color: @color-white;
+					}
+
+					.body {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						min-height: 3em;
+					}
+
+					.footer {
+						display: flex;
+						justify-content: center;
+						margin: 1em;
+					}
+				}
+			}
+
+			&.feedback-negativo {
+				.box {
+					background-color: @color-red;
+
+					.label {
+						text-align: center;
+						color: @color-white;
+					}
+
+					.body {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						min-height: 3em;
+					}
+
+					.footer {
+						display: flex;
+						justify-content: center;
+						margin: 1em;
+					}
+				}
+			}
+		}
+
+		&.pick-vf {
+			@color-main: @color-pink;
+			@color-border: @color-purple;
+			width: 100%;
+			height: 100%;
+
+			.continuar {
+				display: none;
+			}
+
+			.feedback {
+				.box {
+					width: 30em;
+				}
+			}
+
+			.sentencas {
+				padding: 1em;
+
+				.sentenca {
+					display: flex;
+					margin-bottom: .5em;
+
+					.alternativa,
+					.texto {
+						background-color: @color-border;
+						color: @color-main;
+						border: solid .15em @color-main;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						padding: 1em;
+						border-radius: .5em;
+					}
+
+					.alternativa {
+						height: 3em;
+						width: 3em;
+						margin-right: .5em;
+						cursor: pointer;
+
+						&.selecionado,
+						&:hover {
+							color: @color-border;
+							background-color: @color-main;
+							border-color: @color-border;
+						}
+					}
+
+					.texto {
+						height: 3em;
+						width: 100%;
+						cursor: default;
+					}
+				}
+			}
+
+			&.lock {
+				.continuar {
+					display: block;
+				}
+
+				.confirmar,
+				.alternativa {
+					pointer-events: none;
+
+					&:not(.selecionado) {
+						opacity: .5;
+					}
+				}
+
+				.sentencas {
+					.sentenca {
+						.resposta-correta {
+							// border-color: rgb(0, 139, 23);
+							// color: #fff;
+						}
+
+						.selecionado.resposta-errada {
+							color: #fff;
+							background-color: rgb(139, 0, 0);
+						}
+					}
+				}
+
+				.confirmar {
+					display: none;
+				}
+			}
+		}
+
+		&.lock {
+			.confirmar {
+				.hide;
+			}
+		}
+
+		&.imgmap {
+			.alternativa {
+				cursor: pointer;
+				padding: .5em;
+				display: flex;
+				align-items: center;
+
+				.seletor {
+					height: 1em;
+					width: 1em;
+					background-color: #fff;
+					border-radius: 100%;
+					display: inline-block;
+					margin-right: 1em;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
+					&:after {
+						content: '';
+						transition: all .4s;
+						height: 0%;
+						width: 0%;
+						background-color: @color-grey;
+						border-radius: 100%;
+					}
+				}
+
+				.text {
+					display: inline-block;
+				}
+
+				&:hover,
+				&.selecionado {
+					.seletor {
+						&:after {
+							height: 80%;
+							width: 80%;
+						}
+					}
+				}
+			}
+
+			&.lock {
+				.alternativa {
+					opacity: .5;
+					pointer-events: none;
+				}
+			}
+
+			.imagem {
+				img {
+					overflow: hidden;
+					border-radius: .5em;
+					width: 100%;
+				}
+			}
+		}
+
+		&.pick-one,
+		&.pick-many {
+			.alternativas {
+				display: flex;
+			}
+
+			.alternativa {
+				// .btn;
+				// .btn-blue;
+				padding: .5em;
+				display: flex;
+				align-items: center;
+				margin: .2em;
+				padding: 1em;
+				border-radius: 2em;
+				width: 50%;
+
+				.text {
+					display: inline-block;
+					text-align: center;
+					font-size: 1.1em;
+				}
+
+				&:hover,
+				&.selecionado {
+					background-position: 100%;
+				}
+			}
+
+			.resposta-correta {
+				background-color: #258CC4;
+				transition-duration: .5s;
+
+			}
+
+			.resposta-correta:hover {
+				background-color: #16384a;
+				transition-duration: .5s;
+			}
+
+			.resposta-errada {
+				background-color: #258CC4;
+				transition-duration: .5s;
+
+			}
+
+			.resposta-errada:hover {
+				background-color: #16384a;
+				transition-duration: .5s;
+			}
+
+			&.HQ {
+				.alternativas {
+					flex-direction: column;
+
+					.alternativa {
+						width: 100%;
+
+						.text {
+							font-size: 1.4em;
+							text-align: center;
+						}
+					}
+				}
+
+				.confirmar {
+					margin-top: 1em;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,229 @@
+@import 'includes/imports.less';
+
+/* less components */
+@import 'includes/component/guide.less';
+@import 'includes/component/accordeon.less';
+@import 'includes/component/quiz.less';
+@import 'includes/component/component.slider.less';
+@import 'includes/component/component.modal.less';
+@import 'includes/component/component.acessibilidade.less';
+@import 'includes/component/component.libras.less';
+@import 'includes/component/avatar.less';
+@import 'includes/component/equipamentos.less';
+@import 'includes/component/conquistas.less';
+@import 'includes/component/ballon.less';
+@import 'includes/component/instrucoes.less';
+@import 'includes/component/menuScreen.less';
+@import 'includes/exercise/exercise.pick-x.less';
+
+/* less template */
+@import 'includes/import-fonts.less';
+@import 'includes/spacers.less';
+@import 'includes/colors.less';
+@import 'includes/fonts.less';
+@import 'includes/buttons.less';
+@import 'includes/defaults.less';
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	// margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10em;
+    border-bottom: .8em solid @color-04;
+    background-color: @color-05;
+    .logo {
+        width: 35em;
+        height: 28em;
+    }
+    .fullscreen {
+        width: 6.2em;
+        margin: 0;
+        padding: 0;
+        img {
+            width: 100%;
+            filter: invert(100%) sepia(98%) saturate(9%) hue-rotate(178deg) brightness(103%) contrast(103%);
+        }
+    }
+}
+
+.boxTop {
+    height: 26em;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url(../assets/img/topogame.jpg);
+    background-size: cover;
+    padding: 0 18em;
+    .top {
+        width: 100%;
+    }
+    .title {
+        color: @color-02;
+        font-size: 5em;
+        text-transform: uppercase;
+        width: min-content;
+    }
+    .info {
+        display: flex;
+        align-items: center;
+        gap: 2em;
+        .timer {
+            // width: 6.5em;
+        }
+        .value {
+            color: @color-white;
+            font-size: 3em;
+        }
+    }
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    background-color: @color-black;
+    width: 100%;
+    height: 7.7em;
+    display: flex;
+    justify-content: flex-end;
+
+    &::before {
+        content: '';
+        width: 21.5em;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url(../assets/img/detal1.png);
+        background-size: 101%;
+        z-index: 1;
+    }
+    button {
+        background-color: @color-01;
+        width: 18.4em;
+        height: 100%;
+        p {
+            font-size: 3em;
+            margin: 0;
+            font-weight: 600;
+            color: @color-white;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.info {
+    width: 20em;
+    .value {
+        // font-family: 'Tilt Neon';
+        font-size: 6.5em !important;
+        color: @color-white !important;
+        position: relative;
+        letter-spacing: 0.05em;
+        animation: flicker 1.5s infinite alternate; 
+    }
+    @keyframes flicker {
+    
+        0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+          
+            text-shadow:
+                -0.1rem -0.1rem 1rem #fff,
+                0.1rem 0.1rem 1rem #fff,
+                0 0 1rem @color-01,
+                0 0 2rem @color-01,
+                0 0 3rem @color-01,
+                0 0 4rem @color-01,
+                0 0 10rem @color-01;        
+        }
+        
+        20%, 24%, 55% {        
+            text-shadow: none;
+            box-shadow: none;
+        }    
+    }
+}
+
+button {
+    cursor: pointer;
+}
+
+i {
+    font-weight: 500 !important;
+}
+
+p {
+	font-size: .9em;
+}
+
+ul {
+    padding: 0 0 0 1.5em;
+}
+
+.hide {
+	display: none !important;
+}
+
+.mr-full{
+    opacity: 0;
+    animation: go-back 1s forwards;
+    animation-delay: 0.2s;
+}
+
+@keyframes go-back {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

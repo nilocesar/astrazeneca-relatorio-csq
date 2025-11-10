@@ -1,0 +1,35 @@
+.pick-many {
+  user-select: none;
+}
+.pick-many.respondido .alternativa,
+.pick-many.respondido .confirmar {
+  pointer-events: none;
+}
+.pick-many.respondido .confirmar {
+  display: none;
+}
+.pick-many.respondido.terminado .resposta-correta {
+  background-color: green;
+  color: white;
+}
+.pick-many.respondido.terminado .resposta-errada {
+  background-color: red;
+  color: white;
+}
+.pick-many .alternativa {
+  border: solid 2px black;
+  padding: 0.5em 1em;
+  display: inline-block;
+  cursor: pointer;
+}
+.pick-many .alternativa:hover {
+  border-color: blue;
+}
+.pick-many .alternativa.selecionado {
+  border-color: cyan;
+}
+.pick-many .hide {
+  opacity: 0;
+  pointer-events: none;
+}
+

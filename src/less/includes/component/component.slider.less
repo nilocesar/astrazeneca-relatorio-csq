@@ -1,0 +1,71 @@
+.content {
+    margin: 0 auto !important;
+    width: calc(100% - 4em);
+    background-color: transparent;
+    .slider {
+        .slider-container {
+            .slide {
+                max-width: 100%;
+                background-color: transparent;
+                .boxBorder {
+                    background-color: @color-white;
+                    border: solid 0.15em @color-01;
+                    width: calc(100% - 7.3em);
+                    min-height: 10em;
+                    height: 85%;
+                    margin: auto;
+                    display: flex;
+                    gap: 1em;
+                    flex-direction: column;
+                    justify-content: center;
+                    padding: 0 2em 2em;
+                }
+            }
+        }
+        .slider-counter-group {
+            display: flex;
+            justify-content: center;
+            gap: .5em;
+            bottom: 1.5em !important;
+            .slider-counter {
+                width: .6em !important;
+                height: .6em !important;
+                background-color: #0005;
+                border: none !important;
+                margin: 0 !important;
+                &.selected {
+                    background-color: @color-01;
+                }
+            }
+        }
+        
+        .slider-controls {
+            .slider-control {
+                position: absolute;
+                top: calc(50% - 1.15em);
+                cursor: pointer;
+                background-color: @color-04;
+                width: 2.3em !important;
+                height: 2.3em;
+                border-radius:  0 0.7em 0 0.7em;
+                z-index: 1;
+                // box-shadow: 0.1em 0.1em 0.2em 0em #0005;
+                z-index: 99;
+                background-image: url(../assets/img/arrow2.png);
+                background-repeat: no-repeat;
+                background-size: 1em;
+                background-position: center;
+                &.slider-control-prev {
+                    left: .5em !important;
+                    transform: rotateY(180deg);
+                }
+                &.slider-control-next {
+                    right: .5em !important;
+                }
+                &::before {
+                    display: none;
+                }
+            }
+        }
+    }
+}

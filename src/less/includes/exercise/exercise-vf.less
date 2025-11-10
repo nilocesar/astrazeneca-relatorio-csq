@@ -1,0 +1,96 @@
+@import '../colors.less';
+@import '../fonts.less';
+.container-gerdau {
+    width: 100%;
+    height: 100%;
+}
+.btn-next {
+	display: none;
+}
+
+.lock {
+	pointer-events: none;
+}
+body {
+	.boxExercicio {
+		margin-left: 6em;
+		.textos {
+			color: @color-blue-dark;
+			font-size: @font-03;
+			width: 39em;
+			margin-bottom: 1em;
+			.numero {
+				color: @color-gray-light;
+				font-size: 2em;
+				margin-left: -1.3em;
+				margin-bottom: -0.2em;
+			}
+		}
+		.botoes {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 5em;
+			.botao {
+				margin: 1em;
+				background-color: @color-yellow-02;
+				padding: 0.8em;
+				border-radius: 1.5em;
+				cursor: pointer;
+				p {
+					color: @color-white;
+					text-transform: uppercase;
+					margin: 0;
+				}
+			}
+		}
+	}
+	.quiz {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		.sentenca {
+			display: flex;
+			align-items: center;
+			.texto {
+				p {
+					color: @color-blue-dark;
+				}
+			}
+			
+		}
+		.alternativas {
+			width: 47em;
+			.alternativa {
+				cursor: pointer;
+				margin: 0.2em;
+				.seletor {
+					@size: 1.5em;
+					border-radius: 100%;
+					margin-right: @size / 3;
+					font-weight: 900;
+					width: @size;
+					height: @size;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					background-color: @color-gray-light-03;
+					color: @color-blue-02;
+					p {
+						margin: 0;
+					}
+				}
+		
+				&:hover,
+				&.selected,
+				&.selecionado {
+					.seletor {
+						background-color: @color-yellow-02;
+						color: @color-white;
+					}
+				}
+			}
+		}
+	}
+}

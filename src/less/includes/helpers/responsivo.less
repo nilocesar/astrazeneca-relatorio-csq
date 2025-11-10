@@ -1,0 +1,22 @@
+@xs: ~'(max-width: 500px)';
+@sm: ~'(max-width: 800px)';
+@md: ~'(max-width: 1280px)';
+@lg: ~'(max-width: 1920px)';
+
+html {
+    @media @lg {
+        font-size: 24px;
+    }
+
+    @media @md {
+        font-size: 22px;
+    }
+
+    @media @sm {
+        font-size: 20px;
+    }
+
+    @media @xs {
+        font-size: 18px;
+    }
+}

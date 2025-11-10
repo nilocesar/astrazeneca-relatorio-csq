@@ -1,0 +1,35 @@
+include ../hud/mixin.indicador.pug
+doctype html
+html.mr-fontsize(lang='pt')
+	head
+		title
+			block title
+		meta(charset='UTF-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		meta(http-equiv='X-UA-Compatible', content='ie=edge')
+		link(rel='stylesheet', href='app/vendor/animate.min.css')
+		link(rel='stylesheet', href='app/vendor/normalize.css')
+		link(rel='stylesheet', href='app/modules/engine.css')
+		link(rel='stylesheet', href='app/template/index.css')
+	body
+		main#main
+		.hud
+			block hud
+				.indicadores
+					block indicadores
+		block popups
+		//- include ../hud/hud.cover.pug
+		include ../hud/hud.loader.pug
+		//- vendor
+		script(src='app/vendor/bluebird.min.js')
+		script(src='app/vendor/jquery.min.js')
+		block vendor-js
+
+		//- config & engine
+		script(src='app/config.js')
+		script(src='app/modules/engine.min.js')
+		script(src='app/modules/component.hud-loader.js')
+		//- modules
+		block modules-js
+		//- Main
+		script(src='app/template/main.bundle.js')

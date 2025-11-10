@@ -1,0 +1,60 @@
+mixin ilha()
+  .boxIlha
+    .nuvens
+    .ilha
+      button.btn.btn1.conc1(onclick="navigate.next()", tabindex=acessib_count++ )
+        .flexObs
+          .boxText
+            p.title(data-language="obstaculos-text-01",)
+            p(data-language="obstaculos-text-02",)
+          +image('help/medal.png','ico')
+        +image('map/pers01.png','persona')
+      button.btn.btn2(onclick="navigate.next()" , tabindex=acessib_count++)
+        +image('map/pers02.png','persona')
+        .check
+          +image('map/check1.svg','')
+
+      button.btn.btn3(data-modal="#modal-tela-15", tabindex=acessib_count++)
+        +image('map/pers03.png','persona')
+        .check
+          +image('map/check2.svg','')
+
+      button.btn.btn4(onclick="navigate.next()" , tabindex=acessib_count++)
+        +image('map/pers04.png','persona')
+        p(data-language="obstaculos-text-12",)
+        .check
+          +image('map/check1.svg','')
+
+      button.btn.btn5.conc2(onclick="navigate.next()" , tabindex=acessib_count++)
+        +image('map/pers05.png','persona')
+        .flexObs
+          .boxText
+            p.title(data-language="obstaculos-text-03",)
+            p(data-language="obstaculos-text-04",)
+          +image('help/medal.png','ico')
+      button.btn.btn6(onclick="navigate.next()" , tabindex=acessib_count++)
+        +image('map/pers06.png','persona')
+      button.btn.btn7.conc3(onclick="navigate.next()" , tabindex=acessib_count++)
+        .flexObs
+          .boxText
+            p.title(data-language="obstaculos-text-05",)
+            p(data-language="obstaculos-text-06",)
+          +image('help/medal.png','ico')
+        +image('map/pers07.png','persona')
+      button.btn.btn8.conc4(onclick="navigate.next()" , tabindex=acessib_count++)
+        .flexObs
+          .boxText
+            p.title(data-language="obstaculos-text-07",)
+            p(data-language="obstaculos-text-08")
+          +image('help/medal.png','ico')
+        +image('map/pers08.png','persona')
+      button.btn.btn9.conc5(onclick="navigate.next()" , tabindex=acessib_count++)
+        .flexObs
+          .boxText
+            p.title(data-language="obstaculos-text-09",)
+            p(data-language="obstaculos-text-10",)
+          +image('help/medal.png','ico')
+      button.btn.btn10(onclick="navigate.next()" , tabindex=acessib_count++)
+        p(data-language="obstaculos-text-11",)
+        +image('map/pers09.png','persona')
+    .bloqueador

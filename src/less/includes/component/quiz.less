@@ -1,0 +1,89 @@
+.quiz {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h3 {
+        width: 100%;
+    }
+    p {
+        width: 100%;
+        b {
+            color: @color-01;
+        }
+    }
+    .alternativas {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        width: 100%;
+        .alternativa {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            height: 5em;
+            padding: 0;
+            border: none;
+            &.selecionado {
+                .letra {
+
+                }
+                .text {
+                    background-color: @color-01;
+                    border: solid .2em @color-01;
+                    p {
+                        color: @color-white;
+                    }
+                }
+            }
+            .letra {
+                width: 9%;
+                height: 100%;
+                background-color: @color-white;
+                border: solid .2em @color-01;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                h2 {
+                    margin: 0;
+                    color: @color-01;
+                }
+            }
+            .text {
+                width: calc(100% - 9%);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                height: 100%;
+                padding: 0 1em;
+                p {
+                    margin: 0;
+                    text-align: left;
+                }
+            }
+        }
+    }
+    &.respondido {
+        .alternativas {
+            .alternativa {
+                background-color: transparent;
+                p {
+                    color: initial;
+                }
+                &.resposta-correta {
+                    // border: solid green .2em;
+                }
+            }
+        }
+    }
+    .confirmar {
+        position: absolute;
+        bottom: -3em;
+        background-color: @color-04;
+        border-radius: 0.6em 0;
+        padding: 0.2em 1.2em 0.2em;
+        font-weight: 600;
+        color: @color-white;
+        text-transform: uppercase;
+    }
+}

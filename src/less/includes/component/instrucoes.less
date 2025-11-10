@@ -1,0 +1,122 @@
+.container-instrucoes{
+
+  &.ballon-model-01{
+    position: absolute;
+    top: 11em;
+	  left: 18em;
+    z-index: 999;
+
+    .pular{
+      position: absolute;
+      z-index: 14;
+      bottom: -0.6em;
+      cursor: pointer;
+      left: 50%;
+      margin-left: -2em;
+      border-radius: 1.2em;
+      background: #7cccbf;
+      box-shadow: 0px 3px 12px rgba(9, 41, 36, 0.61);
+      padding: 0.2em 1em;
+      border: 0.1em solid #bce3dc;
+      transition: all 0.3s ease;
+      &:hover{
+        transform: scale(1.1);
+      }
+
+      p{
+        font-weight: bold;
+        color: #00a88e;
+      }
+    }
+
+    .btn-ballon{
+      position: absolute;
+      z-index: 14;
+      bottom: 1em;
+      cursor: pointer;
+      width: 2.5em;
+      height: 2.5em;
+      
+      img{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      &.btn-disabled{
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      &.btn-ballon-prev{
+        left: 1em;
+        transform: scale(-1);
+
+        &:hover{
+          transform: scale(-1.1);
+        }
+      }
+      &.btn-ballon-next{
+        right: 1em;
+        &:hover{
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    .ico-ballon{
+      position: absolute;
+      z-index: 12;
+      width: 4em;
+      height: 4em;
+      top: -2em;
+      right: -2em;
+    }
+
+    .fundo-ballon{
+      position: relative;
+      z-index: 11;
+      border-radius: 1em;
+      background: #00a88e;
+      border: 0.3em solid #7cccbf;
+      filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.16));
+      box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.16);
+      padding: 1.5em 2.5em;
+      width: 28em;
+      height: 12em;
+      font-size: 1em;
+      // overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .slide-base{
+
+        *{
+          position: relative;
+        }
+
+        .t1{
+          font-weight: bold;
+          .faveFont{
+            font-size: @font-06;
+            line-height: normal;
+          }
+        }
+        .t2{
+          top: -0.4em;
+          font-size: 3em;
+        }
+        .p1{
+          top: -1em;
+        }
+        p,li{
+          font-size: 1em;
+          text-align: center;
+          color: #ffefd3;
+        }
+      }
+    }
+  }
+}

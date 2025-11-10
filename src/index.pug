@@ -1,0 +1,12 @@
+extends ./templates/main/template.estrutura-principal.pug
+block title
+	| AstraZeneca
+block hud
+block popups
+block modules-js
+	script(src='app/modules/behavior.adaptative.js')
+	script(src='app/scripts/resize.js')
+	script(src='app/modules/component.modal.js')
+	script(src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app-compat.js")
+	script(src="https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore-compat.js")
+	script(src='app/scripts/useFirebase.js')

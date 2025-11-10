@@ -1,0 +1,28 @@
+- const tabsIn = [];
+
+mixin instrucoes(template)
+	.container-instrucoes(class!=template.class)
+		.nav-ballon(indice=0)
+			button.btn-ballon.btn-ballon-prev(tabindex=-1)
+				+image('btnAvancar.svg', '') 
+			button.pular( onclick="navigate.next()", tabindex=acessib_count++)
+				p PULAR 
+			button.btn-ballon.btn-ballon-next.pulse(tabindex=-1)
+				+image('btnAvancar.svg', '')
+		.fundo-ballon
+			block
+			each tab in tabsIn
+				.slide-ballon( class!=tab.dat_class libras = tab.libra )
+					.slide-base.up!=tab.block
+
+mixin instrucoes-item( data_libra = "" , data_class = "" )
+	- var data = {};
+	- const oldBuf = pug_html;
+	- pug_html = '';
+	block
+	-
+		data.block = pug_html;
+		data.libra = data_libra;
+		data.dat_class = data_class;
+		tabsIn.push(data);
+		pug_html = oldBuf;

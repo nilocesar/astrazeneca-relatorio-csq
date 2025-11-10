@@ -1,0 +1,5 @@
+mixin controls(component)
+	button.bts.btn-nav.btn-prev(onclick="navigate.prev()" , tabindex=9999 , aria-label='Retornar a Tela anterior' )
+		+image('arrow-white-left.svg', 'arrow')
+	button.bts.btn-nav.btn-next.pulse(onclick="navigate.next()",  tabindex=9998 , aria-label='Avançar para à próxima Tela' )
+				+image('arrow-white-right.svg', 'arrow')

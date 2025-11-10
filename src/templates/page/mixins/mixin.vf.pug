@@ -1,0 +1,53 @@
+mixin pick-vf-sentenca(txtInit, alt1, alt2, txtEnd)
+
+	.sentenca
+		if (txtInit != '')
+			p(data-language=txtInit, tabindex=acessib_count++ )
+		
+		if (alt1[1] == 0)
+			button.alternativa.resposta-errada(tabindex=acessib_count++ , status=alt1[1])
+				span(data-language=alt1[0] )
+		else
+			button.alternativa.resposta-correta(tabindex=acessib_count++, status=alt1[1])
+				span(data-language=alt1[0] )
+		
+		if (alt2[1] == 0)
+			button.alternativa.resposta-errada(tabindex=acessib_count++, status=alt2[1])
+				span(data-language=alt2[0] )
+		else
+			button.alternativa.resposta-correta(tabindex=acessib_count++, status=alt2[1])
+				span(data-language=alt2[0] )
+		
+		if (txtEnd != '')
+			p(data-language=txtEnd, tabindex=acessib_count++ )
+
+mixin pick-vf-sentenca2(txtInit, alt1, alt2, alt3 , libras)
+
+	.sentenca
+		if (txtInit != '')
+			p.txtInit(data-language=txtInit, tabindex=acessib_count++ )
+		
+		.list
+			if (alt1[1] == 0)
+				button.alternativa.resposta-errada(tabindex=acessib_count++ , status=alt1[1], data-libras=libras)
+					span(data-language=alt1[0] )
+			else
+				button.alternativa.resposta-correta(tabindex=acessib_count++, status=alt1[1], data-libras=libras)
+					span(data-language=alt1[0] )
+			
+			if (alt2[1] == 0)
+				button.alternativa.resposta-errada(tabindex=acessib_count++, status=alt2[1], data-libras=libras)
+					span(data-language=alt2[0] )
+			else
+				button.alternativa.resposta-correta(tabindex=acessib_count++, status=alt2[1], data-libras=libras)
+					span(data-language=alt2[0] )
+
+			if (alt3 != '')
+				if (alt3[1] == 0)
+					button.alternativa.resposta-errada(tabindex=acessib_count++, status=alt3[1], data-libras=libras)
+						span(data-language=alt3[0] )
+				else
+					button.alternativa.resposta-correta(tabindex=acessib_count++, status=alt3[1], data-libras=libras)
+						span(data-language=alt3[0] )
+		
+		

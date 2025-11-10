@@ -1,0 +1,32 @@
+mixin menuScreen()
+    .menuBase
+        .bg
+        .menuAll
+            button.menuIt.menuIt1.inativo(tabindex=acessib_count++ , onClick="navigate.goto('09_tela')")
+                .texts
+                h2 FASE 1
+                p Manejando<br> os rejeitos
+                .icos
+                    +image('avatar/clock.png', 'clock', '')
+                    +image('avatar/unclock.png', 'unclock', '')
+            button.menuIt.menuIt2.inativo(tabindex=acessib_count++)
+                .texts
+                h2 FASE 2
+                p Cuidando<br> do rio Doce
+                .icos
+                    +image('avatar/clock.png', 'clock', '')
+                    +image('avatar/unclock.png', 'unclock', '')
+            button.menuIt.menuIt3.inativo(tabindex=acessib_count++)
+                .texts
+                h2 FASE 3
+                p Conhecendo<br> a pesca
+                .icos
+                    +image('avatar/clock.png', 'clock', '')
+                    +image('avatar/unclock.png', 'unclock', '')
+            button.menuIt.menuIt4.inativo(tabindex=acessib_count++)
+                .texts
+                h2 FASE 4
+                p Protegendo a<br> biodiversidade
+                .icos
+                    +image('avatar/clock.png', 'clock', '')
+                    +image('avatar/unclock.png', 'unclock', '')

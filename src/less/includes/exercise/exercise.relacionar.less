@@ -1,0 +1,128 @@
+@import '../colors.less';
+@import '../fonts.less';
+.container-gerdau {
+    width: 100%;
+    height: 100%;
+}
+
+.btn-next {
+	display: none;
+}
+
+.lock {
+	pointer-events: none;
+}
+
+body {
+	.exercise-relacionar {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		.boxExercicio {
+			margin-left: 6em;
+		}
+		.textos {
+			color: @color-blue-dark;
+			font-size: @font-03;
+			margin-bottom: 2em;
+			width: 40em;
+			.numero {
+				color: @color-gray-light;
+				font-size: 2em;
+				margin-left: -1.1em;
+				margin-bottom: -0.3em;
+			}
+		}
+		.botoes {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 5em;
+			.botao {
+				margin: 1em;
+				background-color: @color-yellow-02;
+				padding: 0.8em;
+				border-radius: 1.5em;
+				cursor: pointer;
+				p {
+					color: @color-white;
+					text-transform: uppercase;
+					margin: 0;
+				}
+			}
+		}
+		.gabarito {
+			display: none !important;
+		}
+		.colunas {
+			display: flex;
+			justify-content: center;
+			color: @color-blue-dark;
+			font-size: 0.9em;
+	
+			.coluna {
+				width: 50%;
+			}
+	
+			.left-itens {
+				margin-right: 1em;
+				line-height: 3.3em;
+				
+				.item {
+					justify-content: flex-end;
+					flex-direction: row-reverse;
+					p {
+						text-align: left;
+						margin: 0;
+						width: 19.1em;
+					}
+				}
+			}
+	
+			.right-itens {
+				margin-left: 1em;
+				margin-top: 0.1em;
+				line-height: 3.3em;
+			}
+	
+			.item {
+				cursor: pointer;
+				display: flex;
+				margin: .4em;
+				align-items: center;
+	
+				.text {
+					min-width: 2em;
+					margin: 0 .4em;
+				}
+	
+				&.selecionado {
+					.seletor:not(.gabarito) {
+						animation: none;
+						border-color: @color-blue-dark;
+					}
+				}
+
+				&.incorreto {
+					.seletor:not(.gabarito) {
+						background-color: @color-red !important;
+					}
+				}
+	
+				.seletor {
+					width: 2.5em;
+					height: 2.5em;
+					border-style: solid;
+					border-width: .125em;
+					border-radius: 100%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					color: @color-blue-dark;
+					font-weight: 900;
+				}
+			}
+		}
+	}
+}

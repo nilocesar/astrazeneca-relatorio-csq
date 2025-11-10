@@ -1,0 +1,20 @@
+mixin scriptVendor(name)
+	script(src="../../vendor/"+name)
+mixin scriptModule(name)
+	script(src="../../modules/"+name)
+mixin scriptScripts(name)
+	script(src="../../scripts/"+name)
+mixin linkVendor(name)
+	link(rel="stylesheet" href="../../vendor/"+name)
+mixin linkModule(name)
+	link(rel="stylesheet" href="../../modules/"+name)
+
+mixin image(filename, classes="", alt="", traducao='')
+	- var _alt = ( alt ? alt : '' )
+	- var tabindex = (alt ? acessib_count++ : -1 )
+	img(	src="../../assets/img/"+filename, 
+				class!=classes, 
+				tabindex=tabindex, 
+				alt!=_alt, 
+				aria-label!=_alt, 
+				image-translate!=traducao )

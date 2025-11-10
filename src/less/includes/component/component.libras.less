@@ -1,0 +1,102 @@
+.librasDiv{
+	position: absolute;
+	display: none;
+	width: auto;
+	height: auto;
+	background-color: transparent;
+	z-index: 9999999999;
+	border-radius: 0.2rem;
+	padding: 0.2rem;
+	flex-direction: row;
+	align-content: center;
+	align-items: flex-end;
+
+	.controls{
+		display: flex;
+		flex-direction: column;
+		background-color: transparent;
+		.control {
+			cursor: pointer;
+			background: #FFFFFF;
+			width: 2rem;
+			height: 2rem;
+			background-size: 70%;
+			background-repeat: no-repeat;
+			background-position: center;
+			margin: .3rem 0;
+			&.closeLibras{
+				background-image: url(../assets/img/close_libras.png);
+			}
+			&.arraste{
+				background-image: url(../assets/img/arraste.png);
+			}
+		}
+	}
+	
+	.crop{
+		overflow: hidden;
+		width: 100%;
+		height: auto;
+		border: .3rem;
+		border-style: solid;
+		border-color: #00338f;
+		background-color: #00338f;
+		border-radius: .5rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.video{
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: #FFFFFF;
+			color: #00338f;
+			width: 100%;
+			height: auto;
+			overflow: hidden;
+		  min-width: 15rem;
+   		min-height: 7.5rem;
+			iframe, video{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 100%;
+    		height: 10rem;
+			}
+		}
+	}
+}
+
+.button-libras-right {
+	display: none;
+}
+
+@media screen and (max-width: 800) {
+	.button-libras-right {
+		display: block;
+		// .btnLibras {
+		// 	display: block !important;
+		// 	position: fixed;
+		// 	cursor: pointer;
+		// 	top: 11%;
+		// 	right: 0;
+		// 	z-index: 9;
+		// 	img {
+		// 		min-width: 3rem;
+		// 	}
+		// }
+	}
+
+	.librasDiv{
+		width: 60%;
+		top: 11%;
+		right: 0;
+		flex-direction: row-reverse;
+		align-items: flex-start;
+		.arraste {
+			display: none;
+		}
+	}
+}

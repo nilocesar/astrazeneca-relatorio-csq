@@ -1,0 +1,48 @@
+extends template.page-base.pug
+
+block styles
+    link(rel="stylesheet", href="style.css")
+block body
+    block variables
+    .cover
+        .HQ.corpo(id=id)
+            .caixa
+                .conteudo1
+                    block conteudo1
+            .caixa
+                .conteudo2
+                    block conteudo2
+            .caixa
+                .conteudo3
+                    .fundo
+                        .ajuste 
+                            .title 
+                                block pergunta
+                        .caixarest
+                            .alternativas(style="margin-top: 0em; padding: 0em;")
+                                block alternativas
+                               
+                            button.btn.confirmar.btn-ok.btn-default Confirmar
+            .center-flex.feedback.feedback-positivo
+                .box
+                    .header 
+                        .label 
+                            h1 Muito bem!
+                    .body
+                        block feedback-positivo 
+                    .footer
+                        button.btn.btn-default(onclick=closeFeedbackClickExpression) Ok
+            .center-flex.feedback.feedback-negativo
+                .box
+                    .header 
+                        .label 
+                            h1 Fique esperto!
+                    .body
+                        block feedback-negativo 
+                    .footer
+                        button.btn.btn-default(onclick=closeFeedbackClickExpression) Ok
+    .click-dica Toque sobre os quadrantes para continuar a história após escolha uma decisão. 
+block scripts
+    script(src="../../modules/component.pick-one.js")
+    script(src="../../modules/component.modal.js")
+    script(src="script.js")

@@ -1,0 +1,131 @@
+
+.colorMake(@color, @name) {
+	.color-@{name} {
+		color: @color;
+
+		&.spread {
+			* {
+				color: @color;
+			}
+		}
+	}
+
+	.bg-color-@{name} {
+		background-color: @color;
+
+		&.spread {
+			* {
+				background-color: @color;
+			}
+		}
+	}
+
+	.bg-color-@{name}-10 {
+		background-color: fadeout(@color, 10%);
+
+		&.spread {
+			* {
+				background-color: fadeout(@color, 10%);
+			}
+		}
+	}
+
+	.bg-color-@{name}-20 {
+		background-color: fadeout(@color, 20%);
+
+		&.spread {
+			* {
+				background-color: fadeout(@color, 20%);
+			}
+		}
+	}
+
+	.bg-color-@{name}-30 {
+		background-color: fadeout(@color, 30%);
+
+		&.spread {
+			* {
+				background-color: fadeout(@color, 30%);
+			}
+		}
+	}
+
+	.bg-color-@{name}-40 {
+		background-color: fadeout(@color, 40%);
+
+		&.spread {
+			* {
+				background-color: fadeout(@color, 40%);
+			}
+		}
+	}
+
+	.bg-color-@{name}-50 {
+		background-color: fadeout(@color, 50%);
+
+		&.spread {
+			* {
+				background-color: fadeout(@color, 50%);
+			}
+		}
+	}
+
+	.bg-color-@{name}-60 {
+		background-color: fadeout(@color, 60%);
+
+		&.spread {
+			* {
+				background-color: fadeout(@color, 60%);
+			}
+		}
+	}
+
+	.bg-color-@{name}-70 {
+		background-color: fadeout(@color, 70%);
+
+		&.spread {
+			* {
+				background-color: fadeout(@color, 70%);
+			}
+		}
+	}
+
+	.bg-color-@{name}-80 {
+		background-color: fadeout(@color, 80%);
+
+		&.spread {
+			* {
+				background-color: fadeout(@color, 80%);
+			}
+		}
+	}
+
+	.bg-color-@{name}-90 {
+		background-color: fadeout(@color, 90%);
+
+		&.spread {
+			* {
+				background-color: fadeout(@color, 90%);
+			}
+		}
+	}
+
+	.border-color-@{name} {
+		border-color: @color;
+
+		&.spread {
+			* {
+				border-color: @color;
+			}
+		}
+	}
+}
+
+
+.bg-color-gradient(@color1, @color2) {
+	background-color: @color1;
+	background-image: -moz-linear-gradient(-45deg, @color1 33%, @color2 66%);
+	background-image: -webkit-linear-gradient(-45deg, @color1 33%, @color2 66%);
+	background-image: linear-gradient(135deg, @color1 33%, @color2 66%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=~"'"@color1~"'", endColorstr=~"'"@color2~"'", GradientType=1);
+}

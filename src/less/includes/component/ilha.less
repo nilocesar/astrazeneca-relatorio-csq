@@ -1,0 +1,310 @@
+.boxIlha {
+    background-position: center;
+    background-size: contain;
+    width: 64.5em;
+    height: 36em;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .bloqueador {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    .nuvens {
+        position: absolute;
+        top: 7.4em;
+        width: 200%;
+        height: 9.7em;
+        background-image: url(../assets/img/map/nuvens.png);
+        background-size: contain;
+        animation: nuvens 420s linear infinite;
+    }
+    @keyframes nuvens {
+        0%   {background-position-x: 0%}
+        100% {background-position-x: 100%}
+    }
+    .ilha {
+        background-image: url(../assets/img/map/ilha.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        width: 37em;
+        height: 26em;
+        top: 8.9em;
+        left: 14.2em;
+        // animation: ilha 1.8s ease-in-out infinite;
+    }
+    @keyframes ilha {
+        0%   {top: 8.9em;}
+        50% {top: 8.4em;}
+        100% {top: 8.9em;}
+    }
+
+    .btn {
+        // background-color: #0005;
+        display: flex;
+        align-items: center;
+        padding: .2em;
+
+        &.noMedal{
+            .flexObs{
+                .boxText{
+                    margin: 0 !important;
+                }
+                img{
+                    display: none;
+                }
+            }
+        }
+
+        // &.conc1, 
+        // &.conc2, 
+        // &.conc3, 
+        // &.conc4, 
+        // &.conc5{
+        //     &.noMedal{
+        //         &::after{
+        //             position: absolute;
+        //             content: '';
+        //             width: 1.7em;
+        //             height: 1.7em;
+        //             border: 0.13em dashed @color-light;
+        //             border-radius: 100%;
+        //             top: 0;
+        //             right: -1.7em;
+        //             top: 0.3em;
+        //         }
+        //     }
+        // }
+        
+
+        &.ativoBtn{
+            display: flex !important;
+            z-index: 1;
+
+            &::before{
+                position: absolute;
+                content: '';
+                top: 0;
+                left:0;
+                width: 100%;
+                height: 100%;
+                border: dashed .2em @color-blue-dark;
+                transform: scale(1);
+                animation: border-pulse 2s infinite;
+                @keyframes border-pulse {
+                    50% {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+
+        &.inativoBtn{
+            display: flex !important;
+            pointer-events: none !important;
+        }
+
+        .flexObs {
+            display: flex;
+            align-items: center;
+            .boxText {
+                box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.16);
+                background-color: #FBF5DA;
+                margin-right: -0.35em;
+                padding: 0.4em 0.5em;
+                border-radius: 1em;
+                .title {
+                    font-size: 0.5em;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    text-align: center;
+                    color: #8A63A5;
+                }
+                p {
+                    text-align: center;
+                    font-size: 0.67em;
+                    font-weight: 600;
+                    color: #7ABAC4;
+                    margin-top: -.1em;
+                    text-transform: uppercase;
+                }
+            }
+            .ico {
+                width: 2em;
+            }
+        }
+
+        &.btn1 {
+            position: absolute;
+            top: 17.5em;
+            right: 5.7em;
+            .persona {
+                width: 1.25em;
+            }
+        }
+        &.btn2 {
+            position: absolute;
+            top: 17.5em;
+            left: 17em;
+            .persona {
+                width: 1.9em;
+            }
+
+            .check{
+                position: absolute;
+                width: 1.3em;
+                height: 1.3em;
+                bottom: -0.6em;
+                right: -0.1em;
+                display: none;
+
+                
+                img{
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+        &.btn3 {
+            position: absolute;
+            top: 14.6em;
+            left: 7.8em;
+            padding: 1em 0.2em 0.4em;
+            .persona {
+                width: 4.9em;
+            }
+
+            .check{
+                position: absolute;
+                width: 7em;
+                height: 3em;
+                top: -0.8em;
+                left: -0.5em;
+                display: none;
+                
+                img{
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+        &.btn4 {
+            position: absolute;
+            top: 10.4em;
+            left: 1em;
+            padding: 0em 0.2em .4em;
+            .persona {
+                width: 6.9em;
+            }
+            p {
+                text-transform: uppercase;
+                position: absolute;
+                font-weight: bold;
+                
+                color: #8A63A5;
+
+                // font-size: 0.7em;
+                // top: 1em;
+
+                font-size: 0.6em;
+                top: 1.3em;
+
+                left: 0;
+                width: 100%;
+                text-align: center;
+            }
+            .check{
+                position: absolute;
+                width: 1.3em;
+                height: 1.3em;
+                bottom: 1.4em;
+                left: 3em;
+                display: none;
+                
+                img{
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+        &.btn5 {
+            position: absolute;
+            top: 12.4em;
+            right: 5.6em;
+            .persona {
+                width: 2.85em;
+            }
+        }
+        &.btn6 {
+            position: absolute;
+            top: 12.2em;
+            right: 18.3em;
+            .persona {
+                width: 5em;
+            }
+        }
+        &.btn7 {
+            position: absolute;
+            bottom: 13.2em;
+            right: 18.1em;
+            flex-direction: column;
+            align-items: initial;
+            .persona {
+                width: 1.5em;
+                margin: 0.5em 0 0;
+            }
+        }
+        &.btn8 {
+            position: absolute;
+            bottom: 17.7em;
+            right: 9.2em;
+            flex-direction: column;
+            align-items: flex-end;
+            .persona {
+                width: 1.8em;
+                margin: 0;
+            }
+        }
+        &.btn9 {
+            position: absolute;
+            bottom: 23.5em;
+            right: 4.5em;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        &.btn10 {
+            position: absolute;
+            bottom: 25.3em;
+            right: 10em;
+            flex-direction: column;
+            p {
+                text-transform: uppercase;
+                font-weight: bold;
+                font-size: 0.7em;
+                background-color: #003E74;
+                color: white;
+                padding: 0.2em 0.8em;
+                border-radius: 1em;
+                width: fit-content;
+            }
+            .persona {
+                width: 2.6em;
+                margin: .2em 0 0;
+            }
+        }
+    }
+}

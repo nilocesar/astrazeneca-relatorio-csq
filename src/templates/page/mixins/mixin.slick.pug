@@ -1,0 +1,34 @@
+mixin slick(template)
+	.container-slick
+		.wrapper-slider-slick(class!=template.idSlider)
+			each card in template.sliderCards
+				.container( libras != card.libras  )
+					.container-card
+						if card.image
+							.headerSlick
+								img(src!=card.image.src, alt!=card.image.alt, class!=card.image.class, tabindex=-1)
+
+						.main
+							if card.title
+								h2.title.faveFont(data-language=card.title, tabindex=acessib_count++)
+							if card.title2
+								h2.title.title2(data-language=card.title2, tabindex=acessib_count++)
+							
+							if card.content
+								.content(data-language=card.content, tabindex=acessib_count++)
+							if card.content2
+								.content.content2(data-language=card.content2, tabindex=acessib_count++)
+							if card.content3
+								.content.content3(data-language=card.content3, tabindex=acessib_count++)
+							if card.content4
+								.content.content4(data-language=card.content4, tabindex=acessib_count++)
+							if card.content5
+								.content.content5(data-language=card.content5, tabindex=acessib_count++)
+							if card.content6
+								.content.content6(data-language=card.content6, tabindex=acessib_count++)
+							if card.content7
+								.content.content7(data-language=card.content7, tabindex=acessib_count++)
+							if card.content8
+								.content.content8(data-language=card.content8, tabindex=acessib_count++)
+							if card.content9
+								.content.content9(data-language=card.content9, tabindex=acessib_count++)

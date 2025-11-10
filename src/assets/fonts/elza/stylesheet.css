@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'Elza';
+    src: url('Elza-Light.woff2') format('woff2'),
+        url('Elza-Light.woff') format('woff'),
+        url('Elza-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Elza';
+    src: url('Elza-BoldOblique.woff2') format('woff2'),
+        url('Elza-BoldOblique.woff') format('woff'),
+        url('Elza-BoldOblique.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Elza';
+    src: url('Elza-LightOblique.woff2') format('woff2'),
+        url('Elza-LightOblique.woff') format('woff'),
+        url('Elza-LightOblique.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Elza';
+    src: url('Elza-Semibold.woff2') format('woff2'),
+        url('Elza-Semibold.woff') format('woff'),
+        url('Elza-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Elza';
+    src: url('Elza-SemiboldOblique.woff2') format('woff2'),
+        url('Elza-SemiboldOblique.woff') format('woff'),
+        url('Elza-SemiboldOblique.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Elza';
+    src: url('Elza-Regular.woff2') format('woff2'),
+        url('Elza-Regular.woff') format('woff'),
+        url('Elza-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Elza';
+    src: url('Elza-Medium.woff2') format('woff2'),
+        url('Elza-Medium.woff') format('woff'),
+        url('Elza-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Elza';
+    src: url('Elza-MediumOblique.woff2') format('woff2'),
+        url('Elza-MediumOblique.woff') format('woff'),
+        url('Elza-MediumOblique.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Elza';
+    src: url('Elza-Oblique.woff2') format('woff2'),
+        url('Elza-Oblique.woff') format('woff'),
+        url('Elza-Oblique.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Elza';
+    src: url('Elza-Black.woff2') format('woff2'),
+        url('Elza-Black.woff') format('woff'),
+        url('Elza-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Elza';
+    src: url('Elza-Bold.woff2') format('woff2'),
+        url('Elza-Bold.woff') format('woff'),
+        url('Elza-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+

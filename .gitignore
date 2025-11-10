@@ -1,0 +1,8 @@
+node_modules
+package-lock.json
+flamboyant_modules
+scorm
+sys/automation/*
+*.zip
+*.doc*
+*.DS_Store

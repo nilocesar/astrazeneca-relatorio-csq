@@ -1,0 +1,70 @@
+[
+  {
+      "pt-br": {
+        "equipamento-link-01": {
+          "href": "../../assets/pdf/pt_principios.pdf",
+          "class": "",
+          "alt": ""
+        },
+        "equipamento-link-02": {
+          "href": "../../assets/pdf/pt_cultura.pdf",
+          "class": "",
+          "alt": ""
+        },
+        "55_tela-link": {
+          "href": "../../assets/pdf/pt_escalada_gerdau.pdf",
+          "class": "",
+          "alt": ""
+        },
+        "57_tela-link": {
+          "href": "../../assets/pdf/pt_badge.pdf",
+          "class": "",
+          "alt": ""
+        }
+      },
+      "es": {
+        "equipamento-link-01": {
+          "href": "../../assets/pdf/es_principios.pdf",
+          "class": "",
+          "alt": ""
+        },
+        "equipamento-link-02": {
+          "href": "../../assets/pdf/es_cultura.pdf",
+          "class": "",
+          "alt": ""
+        },
+        "55_tela-link": {
+          "href": "../../assets/pdf/es_escalada_gerdau.pdf",
+          "class": "",
+          "alt": ""
+        },
+        "57_tela-link": {
+          "href": "../../assets/pdf/es_badge.pdf",
+          "class": "",
+          "alt": ""
+        }
+      },
+      "en": {
+        "equipamento-link-01": {
+          "href": "../../assets/pdf/en_principles.pdf",
+          "class": "",
+          "alt": ""
+        },
+        "equipamento-link-02": {
+          "href": "../../assets/pdf/en_culture.pdf",
+          "class": "",
+          "alt": ""
+        },
+        "55_tela-link": {
+          "href": "../../assets/pdf/en_escalada_gerdau.pdf",
+          "class": "",
+          "alt": ""
+        },
+        "57_tela-link": {
+          "href": "../../assets/pdf/en_badge.pdf",
+          "class": "",
+          "alt": ""
+        }
+      }
+  }
+]

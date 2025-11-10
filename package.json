@@ -1,0 +1,26 @@
+{
+    "name": "flamboyant_framework",
+    "version": "2.0.0",
+    "description": "",
+    "main": "gulpfile.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "kill": "npx kill-port 5000",
+        "postinstall": ""
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://gitlab.afferolab.net/learning_solutions/flamboyant/flamboyant_framework.git"
+    },
+    "author": "Afferolab",
+    "license": "ISC",
+    "homepage": "https://learn.zohopublic.com/external/manual/documentação-flamboyant?p=3843fd39c26dbc5df04c1282f2c7e8b52b84f3bde5c37f006151a3a29c9b799e",
+    "dependencies": {
+        "flamboyant-cli": "git+https://gitlab.afferolab.net/learning_solutions/flamboyant/flamboyant-cli.git",
+        "jquery-ui": "^1.13.1",
+        "jquery-ui-dist": "^1.13.1",
+        "jquery-ui-touch-punch": "^0.2.3",
+        "nodegit": "^0.27.0"
+    },
+    "devDependencies": {}
+}

@@ -1,0 +1,13 @@
+mixin feedback(feedback)
+    .feedback(class=feedback.classe)
+        .box
+            .linha
+                +image('exercicios/feed-linha.png')
+            .textos
+                .flex
+                    p.titulo(data-language=feedback.titulo)
+                    .icone
+                        img(src=feedback.imagemIcone)
+                p.texto(data-language=feedback.texto)
+            .botao(class=feedback.classBotao)
+                img(src=feedback.imagemFechar)
